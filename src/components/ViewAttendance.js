@@ -60,13 +60,19 @@ const ViewAttendance = () => {
                 <TableCell sx={{ color: "white" }}>{user.employeeID}</TableCell>
                 <TableCell sx={{ color: "white" }}>{user.name}</TableCell>
                 <TableCell sx={{ color: "white" }}>
-                  {new Date(user.attendance[0]?.date).toLocaleDateString()}
+                  {user.attendance.length > 0
+                    ? new Date(user.attendance[0]?.date).toLocaleDateString()
+                    : "N/A"}
                 </TableCell>
                 <TableCell sx={{ color: "white" }}>
-                  {new Date(user.attendance[0]?.date).toLocaleTimeString()}
+                  {user.attendance.length > 0
+                    ? new Date(user.attendance[0]?.date).toLocaleTimeString()
+                    : "N/A"}
                 </TableCell>
                 <TableCell sx={{ color: "white" }}>
-                  {user.attendance[0]?.status}
+                  {user.attendance.length > 0
+                    ? user.attendance[0]?.status
+                    : "N/A"}
                 </TableCell>
               </TableRow>
               {selected === user.employeeID &&
