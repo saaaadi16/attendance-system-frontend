@@ -60,13 +60,13 @@ const ViewAttendance = () => {
                 <TableCell sx={{ color: "white" }}>{user.employeeID}</TableCell>
                 <TableCell sx={{ color: "white" }}>{user.name}</TableCell>
                 <TableCell sx={{ color: "white" }}>
-                  {new Date(user.attendance[0].date).toLocaleDateString()}
+                  {new Date(user.attendance[0]?.date).toLocaleDateString()}
                 </TableCell>
                 <TableCell sx={{ color: "white" }}>
-                  {new Date(user.attendance[0].date).toLocaleTimeString()}
+                  {new Date(user.attendance[0]?.date).toLocaleTimeString()}
                 </TableCell>
                 <TableCell sx={{ color: "white" }}>
-                  {user.attendance[0].status}
+                  {user.attendance[0]?.status}
                 </TableCell>
               </TableRow>
               {selected === user.employeeID &&
@@ -75,13 +75,13 @@ const ViewAttendance = () => {
                     <TableCell sx={{ color: "white" }}></TableCell>
                     <TableCell sx={{ color: "white" }}></TableCell>
                     <TableCell sx={{ color: "white" }}>
-                      {new Date(attendance.date).toLocaleDateString()}
+                      {new Date(attendance?.date).toLocaleDateString()}
                     </TableCell>
                     <TableCell sx={{ color: "white" }}>
-                      {new Date(attendance.date).toLocaleTimeString()}
+                      {new Date(attendance?.date).toLocaleTimeString()}
                     </TableCell>
                     <TableCell sx={{ color: "white" }}>
-                      {attendance.status}
+                      {attendance?.status}
                     </TableCell>
                   </TableRow>
                 ))}
