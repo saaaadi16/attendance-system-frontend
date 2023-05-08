@@ -1,9 +1,8 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Container } from '@mui/material';
-import Register from './components/Register';
-import Attendance from './components/Attendance';
-import CustomAppBar from './components/CustomAppBar';
-import HomePage from './components/HomePage';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Register from "./components/Register";
+import Attendance from "./components/Attendance";
+import CustomAppBar from "./components/CustomAppBar";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
